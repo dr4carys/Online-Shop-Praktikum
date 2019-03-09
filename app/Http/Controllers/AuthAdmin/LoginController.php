@@ -34,12 +34,12 @@ class LoginController extends Controller
 
     public function login(Request $request){
         $this->validate($request,[
-            'email' => 'required|email',
+            'username' => 'required',
             'password'=>'required|min:6'
         ]);
 
         $credential = [
-            'email' => $request->email,
+            'username' => $request->username,
             'password' => $request->password
         ];
 
@@ -47,7 +47,7 @@ class LoginController extends Controller
             return redirect()->intended(route('admin.home'));
         }
 
-        return redirect()->back()->withInput($request->only('email','remember'));
+        return redirect()->back()->withInput($request->only('username','remember'));
 
     }
     public function logout(){
