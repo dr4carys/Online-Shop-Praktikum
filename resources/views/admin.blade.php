@@ -12,6 +12,9 @@
                        
                    @endcomponent
                 </div>
+                <div class="card-footer">
+                    <a href={{route('admin.create')}} class="btn btn-primary btn-md">Create</a>
+                </div>
             </div>
         </div>
     </div>

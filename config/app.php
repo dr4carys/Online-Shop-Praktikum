@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * custom sevice 
+         */
+        App\Providers\PraktikumServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +230,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        // custom allias
+        '_File' => App\Helpers\Praktikum\File::class,
 
     ],
 

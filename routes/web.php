@@ -25,5 +25,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('login','AuthAdmin\LoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.home');
     Route::get('logout','AuthAdmin\LoginController@logout')->name('admin.logout');
+    Route::get('register','AdminController@create')->name('admin.create');
+    Route::post('register','AdminController@store')->name('admin.store');
+});
+
+Route::get('test', function () {
+    return _File::test();
 });
 
