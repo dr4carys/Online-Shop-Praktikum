@@ -30,6 +30,6 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('test', function () {
-    return _File::test();
+    return "bramasta ganteng";
 });
 
